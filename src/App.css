@@ -1,38 +1,112 @@
-.App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+/* Base Styling */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Roboto', sans-serif;
+  background-color: #333; /* Dark background */
+  color: #f1f1f1; /* Light text */
   display: flex;
-  flex-direction: column;
-  align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+  align-items: center;
+  height: 100vh;
+}
+
+h1, h2, h3 {
+  font-weight: 600;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.8);
+}
+
+/* Container Styling */
+div {
+  text-align: center;
+  background: rgba(0, 0, 0, 0.7); /* Transparent black */
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.9);
+  max-width: 600px;
+}
+
+/* Button Styling */
+button {
+  background-color: #ff5722; /* Bold red-orange button */
+  border: none;
   color: white;
+  padding: 15px 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 18px;
+  margin: 10px;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: background-color 0.3s ease-in-out, transform 0.3s ease;
 }
 
-.App-link {
-  color: #61dafb;
+button:hover {
+  background-color: #e64a19; /* Darker red on hover */
+  transform: translateY(-2px);
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+button:active {
+  background-color: #d84315;
+  transform: translateY(0);
+}
+
+/* Special Effects */
+h1 {
+  color: #ff3d00; /* Bold red */
+  font-size: 36px;
+}
+
+h2 {
+  color: #76ff03; /* Zombie green for numbers */
+  font-size: 28px;
+}
+
+h3 {
+  color: #00e676; /* Bright currency color */
+  font-size: 24px;
+}
+
+/* Ammo Reload Button */
+button.reload-btn {
+  background-color: #4caf50; /* Green reload button */
+}
+
+button.reload-btn:hover {
+  background-color: #388e3c;
+}
+
+/* Zombie Number Warning */
+h2.zombies-low {
+  color: #ffeb3b; /* Yellow when zombie numbers are low */
+}
+
+h2.zombies-critical {
+  color: #f44336; /* Red when zombies are critically low */
+}
+
+/* Currency Animation */
+@keyframes currency-pulse {
+  0% {
+    transform: scale(1);
   }
-  to {
-    transform: rotate(360deg);
+  50% {
+    transform: scale(1.1);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+h3 {
+  animation: currency-pulse 1.5s infinite;
+}
+
+/* Responsive for Mobile */
+@media only screen and (max-width: 600px) {
+  button {
+    font-size: 16px;
+    padding: 10px 15px;
   }
 }

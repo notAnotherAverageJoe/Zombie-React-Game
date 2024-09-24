@@ -21,7 +21,7 @@ const GameTime = () => {
     <div>
       <h1>Cannons Fired: {cannon}</h1>
       <h2>Ammo Remaining: {ammo}</h2>
-      <h2>Current Zombimes: {zombies}</h2>
+      <h2>Current Zombies: {zombies}</h2>
       <h3>Currency: {money}</h3>
       <button onClick={fireAndUseAmmo}>Fire Cannon</button>
       <button onClick={reloadCannonAmmo}>Purchase Cannon Ammo</button>
