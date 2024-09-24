@@ -20,11 +20,19 @@ const GameTime = () => {
   return (
     <div>
       <h1>Cannons Fired: {cannon}</h1>
+      <h2
+        className={
+          zombies < 10 ? "zombies-critical" : zombies < 20 ? "zombies-low" : ""
+        }
+      >
+        Current Zombies: {zombies}
+      </h2>
       <h2>Ammo Remaining: {ammo}</h2>
-      <h2>Current Zombies: {zombies}</h2>
       <h3>Currency: {money}</h3>
       <button onClick={fireAndUseAmmo}>Fire Cannon</button>
-      <button onClick={reloadCannonAmmo}>Purchase Cannon Ammo</button>
+      <button className="reload-btn" onClick={reloadCannonAmmo}>
+        Purchase Cannon Ammo
+      </button>
     </div>
   );
 };
